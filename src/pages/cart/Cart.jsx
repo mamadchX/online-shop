@@ -5,7 +5,7 @@ import { ShopContext } from "../../context/shop-context";
 function Cart() {
   const { cartitem, addToCart, removeFromCart } = useContext(ShopContext);
 
-  // Calculate the total price of all items in the cart
+  //  total price 
   const totalPrice = Object.entries(cartitem).reduce((total, [productId, quantity]) => {
     const product = products.find((p) => p.id === parseInt(productId));
     return product ? total + product.price * quantity : total;
