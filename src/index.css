@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: vazir;
+    src: url('./assets/font/Vazir-Medium-FD-WOL.ttf') format('truetype');
+    src: url('./assets/font/Vazir-Medium-FD-WOL.woff') format('woff');
+    src: url('./assets/font/Vazir-Medium-FD-WOL.woff2') format('woff2');
+}
+*{
+    font-family: vazir;
+    box-sizing: border-box;
+}
