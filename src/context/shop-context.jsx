@@ -3,11 +3,10 @@ import React, { createContext, useState, useEffect } from "react";
 export const ShopContext = createContext();
 
  const ShopProvider = ({ children }) => {
-  // Initialize cart items from Local Storage or set to an empty object
   const initialCart = JSON.parse(localStorage.getItem("cart")) || {};
   const [cartitem, setCartitem] = useState(initialCart);
 
-  // Function to add an item to the cart
+  //  add item to the cart
   const addToCart = (productId) => {
     setCartitem((prevCart) => {
       const updatedCart = { ...prevCart, [productId]: (prevCart[productId] || 0) + 1 };
@@ -35,7 +34,6 @@ export const ShopContext = createContext();
     localStorage.removeItem("cart"); // Clear Local Storage
   };
 
-  // Update state when Local Storage changes (optional)
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     if (storedCart) {
